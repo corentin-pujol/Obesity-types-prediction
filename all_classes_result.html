@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="utf-8">
+  <title>PELET Quentin & PUJOL Corentin Machine Learning API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+	<div>
+		<h1>Prediction of obesity level category</h1>
+			<form action="{{ url_for('get_all_classes_prediction')}}"method="post">
+				<div class="flex-container">
+				<br>
+				<br>
+				<div>
+					<label for="gender">Gender:</label>
+					<select name="Gender" id="gender" required="required">
+						<option value="">--Please choose an option--</option>
+						<option value="Female">Female</option>
+						<option value="Male">Male</option>
+					</select>
+					<br>
+					<br>
+					
+					<label for="Age">Age:</label>
+					<input type="text" name="Age" placeholder="Age" required="required"/>
+					<br>
+					
+					<label for="Height">Height:</label>
+					<input type="text" name="Height" placeholder="Height" required="required"/>
+					<br>
+					
+					<label for="Weight">Weight:</label>
+					<input type="text" name="Weight" placeholder="Weight" required="required"/>
+					<br>
+					<br>
+					
+					<label for="family_overweight">Family_overweight:</label>
+					<select name="Family_overweight" id="family_overweight" required="required">
+						<option value="">--Please choose an option--</option>
+						<option value="yes">Yes</option>
+						<option value="no">No</option>
+					</select>
+					<br>
+					<br>
+					
+					<label for="FAVC">FAVC:</label>
+					<select name="FAVC" id="FAVC" required="required">
+						<option value="">--Please choose an option--</option>
+						<option value="yes">Yes</option>
+						<option value="no">No</option>
+					</select>
+					<br>
+					<br>
+					
+					<label for="FCVC">FCVC:</label>
+					<input type="text" name="FCVC" placeholder="FCVC" required="required"/>
+					<br>
+					
+					<label for="NCP">NCP:</label>
+					<input type="text" name="NCP" placeholder="NCP" required="required"/>
+					<br>
+					<br>
+					
+					<label for="CAEC">CAEC:</label>
+					<select name="CAEC" id="CAEC" required="required">
+						<option value="">--Please choose an option--</option>
+						<option value="Always">Always</option>
+						<option value="Sometimes">Sometimes</option>
+						<option value="Frequently">Frequently</option>
+						<option value="no">No</option>
+					</select>
+					<br>
+					<br>
+					
+				</div>
+				<div>
+					<label for="smoke">Smoke:</label>
+					<select name="Smoke" id="smoke" required="required">
+						<option value="">--Please choose an option--</option>
+						<option value="yes">Yes</option>
+						<option value="no">No</option>
+					</select>
+					<br>
+					<br>
+					<label for="CH2O">CH2O:</label>
+					<input type="text" name="CH2O" placeholder="CH2O" required="required"/>
+					<br>
+					<br>
+					
+					<label for="SCC">SCC:</label>
+					<select name="SCC" id="SCC" required="required">
+						<option value="">--Please choose an option--</option>
+						<option value="yes">Yes</option>
+						<option value="no">No</option>
+					</select>
+					<br>
+					<br>
+					
+					<label for="FAF">FAF:</label>
+					<input type="text" name="FAF" placeholder="FAF" required="required"/>
+					<br>
+					
+					<label for="TUE">TUE:</label>
+					<input type="text" name="TUE" placeholder="TUE" required="required"/>
+					<br>
+					<br>
+					
+					<label for="CALC">CALC:</label>
+					<select name="CALC" id="CALC" required="required">
+						<option value="">--Please choose an option--</option>
+						<option value="Always">Always</option>
+						<option value="Sometimes">Sometimes</option>
+						<option value="Frequently">Frequently</option>
+						<option value="no">No</option>
+					</select>
+					<br>
+					<br>
+					
+					<label for="transportation">Transportation:</label>
+					<select name="Transportation" id="transportation" required="required">
+						<option value="">--Please choose an option--</option>
+						<option value="Automobile">Automobile</option>
+						<option value="Bike">Bike</option>
+						<option value="Motorbike">Motorbike</option>
+						<option value="Public_Transportation">Public_Transportation</option>
+						<option value="Walking">Walking</option>
+					</select>
+					<br>
+					<br>
+				<button type="submit" class="btn btn-primary btn-large">Get the category level of obesity</button>
+				</div>
+				<div>
+					<table id="dev-tableau-imc">
+						<thead>
+							<tr>
+								<th>Body mass index</th>
+								<th style="padding-left: 50px">Interpretation</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-imc-min="0" data-imc-max="18.4">
+								<td>less than 18.5 </td>
+								<td style="padding-left: 50px">Underweight (thinness)</td>
+							</tr>
+							<tr data-imc-min="18.4" data-imc-max="25">
+								<td>18.5 to 25</td>
+								<td style="padding-left: 50px"> Normal weight</td>
+							</tr>
+							<tr data-imc-min="25" data-imc-max="30">
+								<td>25 to 30</td>
+								<td style="padding-left: 50px">Overweight type 1 & 2</td>
+							</tr>
+							<tr data-imc-min="30" data-imc-max="35">
+								<td>30 to 35</td>
+								<td style="padding-left: 50px">Obesity type 1</td>
+							</tr>
+							<tr data-imc-min="35" data-imc-max="40">
+								<td>35 to 40</td>
+								<td style="padding-left: 50px">Obesity type 2</td>
+							</tr>
+							<tr data-imc-min="40" data-imc-max="9999">
+								<td>over 40</td>
+								<td style="padding-left: 50px">Obesity type 3</td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+					<br>
+					{{ output }}
+				</div>
+				</div>
+			
+			</form>
+
+		<br>
+	    <br>
+	    
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="utf-8">
+  <title>PELET Quentin & PUJOL Corentin Machine Learning API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+	<div>
+		<h1>Prediction of obesity level category</h1>
+			<div class="flex-container">
+				<div>
+					<form action="{{ url_for('Binary_prediction')}}"method="post">
+						<br>
+						<br>
+						
+						<button type="submit" class="btn btn-primary btn-large">Prediction of Obesity</button>				
+					</form>
+				</div>
+				
+				<div>
+					<form action="{{ url_for('All_classes_prediction')}}"method="post">
+						<br>
+						<br>
+						
+						<button type="submit" class="btn btn-primary btn-large">Prediction of IMC level category</button>				
+					</form>
+				</div>
+			</div>
+
+		<br>
+	    <br>
+		
+	</div>
+</body>
+</html>
