@@ -12,29 +12,50 @@
 
 <body>
 	<div>
-		<h1>Prediction of obesity level category</h1>
+		<h1>Welcome to the API of PELET Quentin & PUJOL Corentin for predicting obesity levels</h1>
+		<br>
+		<p>Below are two options, both of which are predictive methods. One only determines whether a person is obese or not, while the other determines whether a person falls into a BMI range</p>
+		<br>
+		<label for="model">Which model do you want to choose?</label>
+		<br>
+		<br>
+		  <img src="{{url_for('static', filename='comparison.png')}}" align="middle" width="375px" height="338px"/>
+		<br>
 			<div class="flex-container">
 				<div>
 					<form action="{{ url_for('Binary_prediction')}}"method="post">
+						<select name="model" id="model" required="required">
+							<option value="">--Please choose an option--</option>
+							<option value="LDA">LDA</option>
+							<option value="Knn">Knn</option>
+							<option value="SVM">SVM</option>
+							<option value="RandomForest">RandomForest</option>
+							<option value="Boosting">Boosting</option>
+						</select>
 						<br>
 						<br>
-						
 						<button type="submit" class="btn btn-primary btn-large">Prediction of Obesity</button>				
 					</form>
 				</div>
 				
 				<div>
 					<form action="{{ url_for('All_classes_prediction')}}"method="post">
+						<select name="model" id="model" required="required">
+							<option value="">--Please choose an option--</option>
+							<option value="LDA">LDA</option>
+							<option value="Knn">Knn</option>
+							<option value="SVM">SVM</option>
+							<option value="RandomForest">RandomForest</option>
+							<option value="Boosting">Boosting</option>
+						</select>	
 						<br>
-						<br>
-						
+						<br>						
 						<button type="submit" class="btn btn-primary btn-large">Prediction of IMC level category</button>				
 					</form>
 				</div>
 			</div>
 
-		<br>
-	    <br>
+
 		
 	</div>
 </body>

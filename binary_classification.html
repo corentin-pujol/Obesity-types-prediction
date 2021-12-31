@@ -13,6 +13,9 @@
 <body>
 	<div>
 		<h1>Prediction of obesity outcome</h1>
+		{{ output }}
+		<br>
+		<br>
 			<form action="{{ url_for('get_binary_prediction')}}"method="post">
 				<div class="flex-container">
 				<br>
@@ -92,7 +95,7 @@
 					
 				</div>
 				<div>
-<label for="smoke">Do you smoke?</label>
+					<label for="smoke">Do you smoke?</label>
 					<select name="Smoke" id="smoke" required="required">
 						<option value="">--Please choose an option--</option>
 						<option value="yes">Yes</option>
@@ -164,7 +167,6 @@
 					<br>
 				<button type="submit" class="btn btn-primary btn-large">Obesity outcome</button>
 				</div>
-				{{ output }}
 				</div>
 			
 			</form>

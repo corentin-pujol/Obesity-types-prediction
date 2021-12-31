@@ -13,6 +13,9 @@
 <body>
 	<div>
 		<h1>Prediction of obesity level category</h1>
+		{{ output }}
+		<br>
+		<br>
 			<form action="{{ url_for('get_all_classes_prediction')}}"method="post">
 				<div class="flex-container">
 				<br>
@@ -164,7 +167,6 @@
 					<br>
 				<button type="submit" class="btn btn-primary btn-large">Get the category level of obesity</button>
 				</div>
-				{{ output }}
 				</div>
 			
 			</form>
