@@ -1,0 +1,31 @@
+# Python for Data Analysis - ESILV A4 DIA
+
+## Project - Obesity Levels Prediction
+
+### PUJOL Corentin - PELET Quentin
+
+
+## Content :
+
+- Dataset of obesity levels based on eating habits and physical condition in individuals from Colombia, Peru and Mexico.
+- Jupyter Notebook for the analysis of obesity levels with Machine Learning models to predict the BMI range of a person. Flask API included at the end of the notebook.
+- PowerPoint Presentation of the project.
+- The different html files for the display of the API.
+- Static folder containing the style.css, which allow the design of the html pages.
+- The different models trained on the dataset.
+
+## Description
+
+The objectif of this project was to analyse an assigned dataset.
+Our dataset presents the estimation of obesity levels in individuals from the countries of Mexico, Peru and Colombia, based on their eating habits and physical condition.
+The data contains 17 attributes and 2111 records, the records are labeled with the class variable NObesity (Obesity Level). 
+77% of the data was generated synthetically using the Weka tool and the SMOTE filter, 23% of the data was collected directly from users through a web platform.
+
+## Required libraries
+
+Pandas - Matplotlib - Seaborn - Numpy - Sklearn - Pickle - Falsk - Flask_ngrok
+
+## How to use the API
+
+You must run all the code in order to use the API.
+Once the API part of the code is running, click on the link ending by .ngrok.io
