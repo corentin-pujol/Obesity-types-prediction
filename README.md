@@ -28,7 +28,9 @@ Pandas - Matplotlib - Seaborn - Numpy - Sklearn - Pickle - Falsk - Flask_ngrok
 
 ## How to use the API
 
-You must run all the code in order to use the API.
+In the Colab notebook, before executing the code, the files must be placed in the Colab directory following the same organization as in the GitHub directory, in order to avoid any problems when executing the code (statics files in the static folder, pkl models in the models folder, etc).
+
+You must run all the code in order to use the API (although it takes a few minutes).
 
 Once the API part of the code is running, click on the link ending by .ngrok.io
 
@@ -44,4 +46,4 @@ It may happen that a "The website you are about to open is misleading" page open
 
 ![alt text](https://github.com/corentin-pujol/q-Obesity-types-prediction/blob/main/accueil.JPG?raw=true)
 
-
+Enjoy your reading!
