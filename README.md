@@ -35,7 +35,9 @@ Once the API part of the code is running, click on the link ending by .ngrok.io
 It may happen that a "The website you are about to open is misleading" page opens when the Flask application is run, so you should still proceed to open it:
 
 -details
+
 -visit this dangerous site
+
 -If you click on reload page, the home screen will appear as follows:
 
 ![alt text](https://github.com/corentin-pujol/q-Obesity-types-prediction/blob/main/accueil.JPG?raw=true)
