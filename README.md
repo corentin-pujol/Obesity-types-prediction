@@ -40,6 +40,8 @@ It may happen that a "The website you are about to open is misleading" page open
 
 - If you click on reload page, the home screen will appear as follows:
 
+
+
 ![alt text](https://github.com/corentin-pujol/q-Obesity-types-prediction/blob/main/accueil.JPG?raw=true)
 
 
